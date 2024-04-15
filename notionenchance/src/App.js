@@ -19,7 +19,7 @@ function App() {
   const onAddNote = () => {
     const newNote = {
       id: uuid(),
-      title: "Untitled Note",
+      title: "Untitled Notes",
       body: "",
       lastModified: Date.now(),
     };
