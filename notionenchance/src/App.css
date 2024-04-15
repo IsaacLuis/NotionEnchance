@@ -1,0 +1,208 @@
+
+* {
+  box-sizing: border-box;
+}
+
+/* GLOBAL STYLES */
+
+
+.ParentHeader {
+  font-size: 35px;
+  font-weight: 450;
+  color: #FDFDFD;
+  text-shadow: 0px 0px 5px #21a552, 0px 0px 10px #21a552, 0px 0px 10px #21a552,
+    0px 0px 20px #21a552;
+}
+
+body,
+.App {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 16px;
+  background-color: #FDFDFD;
+}
+
+button {
+  background: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  color: #072513;
+}
+button:hover {
+  color: #21a552;
+}
+
+.App {
+  display: flex;
+}
+
+/* SIDEBAR STYLES */
+
+.app-sidebar {
+  width: 30%;
+  height: 100vh;
+  border-right: 1px solid #ddd;
+}
+
+.app-sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+}
+.app-sidebar-header h1 {
+  margin: 0;
+}
+
+.app-sidebar-notes {
+  height: calc(100vh - 78px);
+  overflow-y: scroll;
+}
+.app-sidebar-note {
+  padding: 25px;
+  cursor: pointer;
+}
+.sidebar-note-title {
+  display: flex;
+  justify-content: space-between;
+}
+.app-sidebar-note button {
+  color: crimson;
+}
+.app-sidebar-note p {
+  margin: 10px 0;
+}
+.app-sidebar-note small {
+  display: block;
+  color: #999;
+}
+
+.app-sidebar-note:hover {
+  background: #ddd;
+}
+.app-sidebar-note.active,
+.app-sidebar-note.active small {
+  background: #21a552;
+  color: white;
+}
+
+/* NOTE EDITOR/PREVIEW (MAIN) STYLES */
+
+.app-main {
+  width: 70%;
+  height: 100vh;
+}
+.app-main-note-edit,
+.app-main-note-preview {
+  height: 50vh;
+}
+
+.no-active-note {
+  width: 70%;
+  height: 100vh;
+  line-height: 100vh;
+  text-align: center;
+  font-size: 2rem;
+  color: #999;
+}
+
+/* Editing */
+.app-main-note-edit {
+  padding: 25px;
+}
+
+.app-main-note-edit input,
+textarea {
+  display: block;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  width: 100%;
+  height: calc(50vh - 130px);
+  padding: 10px;
+  resize: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+.app-main-note-edit input {
+  height: 50px;
+  font-size: 2rem;
+}
+
+/* Preview */
+.app-main-note-preview {
+  border-top: 1px solid #ddd;
+  overflow-y: scroll;
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.preview-title {
+  padding: 25px 25px 0 25px;
+  margin: 0;
+}
+
+.markdown-preview {
+  padding: 0 25px 25px 25px;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+
+/* Dark mode Section */
+
+
+
+
+/* Toggle Dark Mode Button Position and Shape */
+.dark-mode,
+.App.dark-mode {
+  background-color:  #333 ; /* Dark background color */
+  color: #FDFDFD ; /* Light text color */
+}
+
+.dark-mode-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000; /* Ensures it stays on top of other content */
+}
+
+.dark-mode-toggle label {
+  display: inline-block;
+  width: 60px; /* Width of the oval background */
+  height: 30px; /* Height of the oval background */
+  background: #ddd; /* Light gray background for the toggle */
+  border-radius: 50px; /* Creates an oval shape */
+  position: relative;
+  cursor: pointer; /* Makes it clear it's clickable */
+}
+
+.dark-mode-toggle label:before {
+  content: '';
+  position: absolute;
+  width: 28px; /* Diameter of the toggle switch */
+  height: 28px; /* Diameter of the toggle switch */
+  background: #fff; /* White color for the toggle switch */
+  border-radius: 50%; /* Makes it circular */
+  top: 1px; /* Small offset from the top to center it vertically */
+  left: 1px; /* Starts at the left side */
+  transition: 0.3s; /* Smooth transition for moving the toggle */
+}
+
+.dark-mode-toggle input[type="checkbox"] {
+  display: none; /* Hides the actual checkbox input */
+}
+
+.dark-mode-toggle input[type="checkbox"]:checked + label {
+  background: #333; /* Dark background for the toggle when active */
+}
+
+.dark-mode-toggle input[type="checkbox"]:checked + label:before {
+  left: calc(100% - 29px); /* Moves the toggle switch to the right when checked */
+}
+
