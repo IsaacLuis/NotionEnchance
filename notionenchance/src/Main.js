@@ -14,6 +14,7 @@ const Main = ({ activeNote, onUpdateNote }) => {
     };
   
     const applyStyle = (style) => {
+        
       const textarea = document.getElementById('body');
       const start = textarea.selectionStart;
       const end = textarea.selectionEnd;

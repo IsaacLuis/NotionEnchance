@@ -121,7 +121,7 @@ button:hover {
 textarea {
   display: block;
   border: 1px solid #ddd;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   width: 100%;
   height: calc(50vh - 130px);
   padding: 10px;
@@ -176,52 +176,4 @@ textarea {
   transform: translateY(1px); /* Pressed down effect */
 }
 
-textarea {
-  width: 100%; /* Ensures textarea fills container */
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-top: 10px;
-}
-
-
-
-
-
-/* Dark mode Section */
-
-/* Dark mode styles */
-.dark-mode {
-  background-color: #121212; /* Dark grey background for the whole component */
-  color: #e0e0e0; /* Light grey text color */
-}
-
-.dark-mode input, .dark-mode textarea, .dark-mode button {
-  background-color: #333;
-  color: #fff;
-  border-color: #444;
-}
-
-.dark-mode .markdown-preview {
-  background-color: #1e1e1e;
-  color: #cfcfcf;
-  padding: 10px;
-  border-radius: 4px;
-}
-
-.dark-mode button {
-  background-color: #2A2A2A;
-  border: none;
-}
-
-.dark-mode button:hover {
-  background-color: #3a3a3a;
-}
-
-.dark-mode button:active {
-  background-color: #4a4a4a;
-}
-/* 
-
-/* Toggle Dark Mode Button Position and Shape */
 
