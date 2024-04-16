@@ -47,9 +47,11 @@ function App() {
     setNotes(updatedNotesArr);
   };
 
+  // Most recent
   const getActiveNote = () => {
     return notes.find(({ id }) => id === activeNote);
   };
+
 
   return (
     <div className="App">
