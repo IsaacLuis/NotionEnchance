@@ -152,57 +152,76 @@ textarea {
   line-height: 2rem;
 }
 
+/* React Markdown Buttons */ 
+
+/* Add this to your CSS file or in a <style> tag in your component file */
+
+.app-main-note-edit button {
+  background-color: #f0f0f0; /* Light grey background */
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.app-main-note-edit button:hover {
+  background-color: #e2e2e2; /* Slightly darker on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.app-main-note-edit button:active {
+  background-color: #d1d1d1; /* Even darker when active */
+  transform: translateY(1px); /* Pressed down effect */
+}
+
+textarea {
+  width: 100%; /* Ensures textarea fills container */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+
+
+
 
 /* Dark mode Section */
 
+/* Dark mode styles */
+.dark-mode {
+  background-color: #121212; /* Dark grey background for the whole component */
+  color: #e0e0e0; /* Light grey text color */
+}
 
+.dark-mode input, .dark-mode textarea, .dark-mode button {
+  background-color: #333;
+  color: #fff;
+  border-color: #444;
+}
 
+.dark-mode .markdown-preview {
+  background-color: #1e1e1e;
+  color: #cfcfcf;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.dark-mode button {
+  background-color: #2A2A2A;
+  border: none;
+}
+
+.dark-mode button:hover {
+  background-color: #3a3a3a;
+}
+
+.dark-mode button:active {
+  background-color: #4a4a4a;
+}
+/* 
 
 /* Toggle Dark Mode Button Position and Shape */
-.dark-mode,
-.App.dark-mode {
-  background-color:  #333 ; /* Dark background color */
-  color: #FDFDFD ; /* Light text color */
-}
-
-.dark-mode-toggle {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 1000; /* Ensures it stays on top of other content */
-}
-
-.dark-mode-toggle label {
-  display: inline-block;
-  width: 60px; /* Width of the oval background */
-  height: 30px; /* Height of the oval background */
-  background: #ddd; /* Light gray background for the toggle */
-  border-radius: 50px; /* Creates an oval shape */
-  position: relative;
-  cursor: pointer; /* Makes it clear it's clickable */
-}
-
-.dark-mode-toggle label:before {
-  content: '';
-  position: absolute;
-  width: 28px; /* Diameter of the toggle switch */
-  height: 28px; /* Diameter of the toggle switch */
-  background: #fff; /* White color for the toggle switch */
-  border-radius: 50%; /* Makes it circular */
-  top: 1px; /* Small offset from the top to center it vertically */
-  left: 1px; /* Starts at the left side */
-  transition: 0.3s; /* Smooth transition for moving the toggle */
-}
-
-.dark-mode-toggle input[type="checkbox"] {
-  display: none; /* Hides the actual checkbox input */
-}
-
-.dark-mode-toggle input[type="checkbox"]:checked + label {
-  background: #333; /* Dark background for the toggle when active */
-}
-
-.dark-mode-toggle input[type="checkbox"]:checked + label:before {
-  left: calc(100% - 29px); /* Moves the toggle switch to the right when checked */
-}
 

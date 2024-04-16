@@ -4,7 +4,7 @@ import uuid from "react-uuid";
 import "./App.css";
 import Main from "./Main";
 import Sidebar from "./Sidebar";
-import Darkmode from "./Darkmode";  
+
 
 function App() {
   const [notes, setNotes] = useState(
@@ -15,6 +15,9 @@ function App() {
   useEffect(() => {
     localStorage.setItem("notes", JSON.stringify(notes));
   }, [notes]);
+
+  
+
 
   const onAddNote = () => {
     const newNote = {
